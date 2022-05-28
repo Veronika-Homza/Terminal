@@ -1,0 +1,89 @@
+1) посмотреть где я                            pwd
+ 
+2) создать папку                               mkdir home_work
+
+3) зайти в папку                               cd home_work
+
+4) создать 3 папки                             mkdir work_1 work_2 work_3
+
+5) зайти в любую папку                         cd work_1
+
+6) создать 5 файлов(3 txt, 2 json)             touch hm1.txt hm2.txt hm3.txt hm4.json hm5.json
+
+7) создать 3 папки                             mkdir testing_1 testing_2 testing_3
+
+8) вывести список содержимого папки            ls -la 
+
+9) + открыть любой txt файл                    cat >> hm1.txt
+
+10) + написать туда что-нибудь, любой текст    just
+                                               work
+                                               hard
+                                               you
+                                               know 
+                                               (Enter)
+
+11) + сохранить и выйти                        control + C 
+
+12) выйти из папки на уровень выше             cd ..
+
+13) переместить любые 2 файла,                 mv work_1/hm1.txt work_2/hm1.txt     
+которые вы создали, в любую другую папку       mv work_1/hm2.txt work_3/hm2.txt
+
+14) скопировать любые 2 файла,                 cp work_1/hm4.json work_2/hm4.json
+которые вы создали, в любую другую папку       cp work_1/hm5.json work_3/hm5.json
+
+15) найти файл по имени                        find . -name hm3.txt
+
+16) просмотреть содержимое в реальном времени  tail -F work_2/hm1.txt | grep just
+(команда grep)                                 control + C
+
+17) вывести несколько первых строк             head -n2 hm1.txt
+из текстового файла   
+
+18) вывести несколько последних строк          tail -n2 hm1.txt 
+из текстового файла
+      
+19) просмотреть содержимое длинного файла      less hm1.txt
+(команда less)                                 /know
+                                               q
+                                               
+20) вывести дату и время                       date
+
+=========
+
+Задание *
+
+1) Отправить http запрос на сервер
+http://162.55.220.72:5005/terminal-hw-request
+
+Запрос:
+curl "http://162.55.220.72:5005/get_method?name=veronika&age=25"
+
+Ответ:
+[
+  "veronika",
+  "25"
+]
+
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+#сделать файл исполняемым: chmod u+x myscript.zsh
+#запуск скрипта: ./myscript.zsh
+#!/bin/zsh
+cd home_work
+mkdir work_1 work_2 work_3
+cd work_1
+touch hm1.txt hm2.txt hm3.txt hm4.json hm5.json
+mkdir testing_1 testing_2 testing_3
+ls -la
+cd ..
+mv work_1/hm1.txt work_2/hm1.txt
+mv work_1/hm2.txt work_3/hm2.txt
+
+
+
+
+
+
